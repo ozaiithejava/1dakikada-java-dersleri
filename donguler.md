@@ -28,7 +28,7 @@
   - Yeni döngü yapıları, kodun daha sade ve okunabilir olmasını sağlar.
 
 ## Örnek Kullanım:
-``Java
+```Java
 public class Main {
     public static void main(String[] args) {
         // Eski for döngüsü
