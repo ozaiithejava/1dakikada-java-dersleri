@@ -10,6 +10,19 @@ Java'da `if-else` tablosu, belirli koşullara bağlı olarak farklı kod bloklar
 
 Her bir blok, süslü parantezler `{ }` içinde bulunan kodu içerir. Koşul sağlandığında ilgili bloktaki kod çalıştırılır. Birden fazla `else if` bloğu ekleyebilirsiniz ve her biri bir önceki koşulun sağlanmaması durumunda kontrol edilir. `else` bloğu ise hiçbir koşul sağlanmadığında çalıştırılır.
 
+## Kısa Kullanımı:
+```Java
+public class Main {
+    public static void main(String[] args) {
+        // Örnek: Bir sayının pozitif mi negatif mi olduğunu kontrol etme
+        int sayi = -5;
+
+        String durum = (sayi > 0) ? "Pozitif" : "Negatif veya Sıfır";
+        System.out.println("Sayı " + durum);
+    }
+}
+```
+
 ## Örnek Kullanım:
 ```Java
 public class Main {
