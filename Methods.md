@@ -78,7 +78,7 @@ public class Main {
     }
 }
 ```
-## Scope
+## Scope Örneği
 ```Java
 public class Main {
     // Global (class) kapsamında bir değişken
@@ -115,6 +115,36 @@ public class Main {
     // Başka bir metod içinde global değişken kullanma
     static void useGlobalVariable() {
         System.out.println("Global Değişken (Metod): " + globalVariable);
+    }
+}
+```
+## Recursion
+```Java
+public class Main {
+    public static void main(String[] args) {
+        int result = factorial(5);
+        System.out.println("5 faktöriyel: " + result);
+
+        int fibonacciResult = fibonacci(7);
+        System.out.println("Fibonacci(7): " + fibonacciResult);
+    }
+
+    // Faktöriyel hesaplayan recursive metod
+    static int factorial(int n) {
+        if (n == 0 || n == 1) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+
+    // Fibonacci sayıları hesaplayan recursive metod
+    static int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
     }
 }
 ```
