@@ -29,6 +29,7 @@
 
 ## Örnek Kullanım:
 ```Java
+
 public class Main {
     public static void main(String[] args) {
         // Eski for döngüsü
@@ -46,22 +47,36 @@ public class Main {
         // Yeni for-each döngüsü
         int[] numbers = {1, 2, 3, 4, 5};
         for (int number : numbers) {
+            if (number == 3) {
+                break; // Döngüyü sonlandırır
+            }
             System.out.println("Yeni for-each döngüsü: " + number);
         }
 
         // Yeni Stream API ile döngü
         List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
-        names.stream().forEach(name -> System.out.println("Yeni Stream API döngüsü: " + name));
+        names.stream().forEach(name -> {
+            if (name.equals("Bob")) {
+                return; // Döngüyü sıradaki adıma geçirir
+            }
+            System.out.println("Yeni Stream API döngüsü: " + name);
+        });
 
-        // Eski for döngüsü ile liste gezme
+        // Eski for döngüsü ile liste gezme ve break
         List<String> colors = Arrays.asList("Red", "Green", "Blue");
         for (int k = 0; k < colors.size(); k++) {
+            if (k == 1) {
+                break; // Döngüyü sonlandırır
+            }
             System.out.println("Eski for döngüsü ile liste gezme: " + colors.get(k));
         }
 
-        // Yeni for-each döngüsü ile liste gezme
+        // Yeni for-each döngüsü ile liste gezme ve continue
         List<String> colorsNew = Arrays.asList("Red", "Green", "Blue");
         for (String color : colorsNew) {
+            if (color.equals("Green")) {
+                continue; // Döngüyü sıradaki adıma geçirir
+            }
             System.out.println("Yeni for-each döngüsü ile liste gezme: " + color);
         }
     }
