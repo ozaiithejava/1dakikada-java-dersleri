@@ -44,4 +44,37 @@ public class Main {
         return num1 * num2;
     }
 }
+```
+## OverLoading Methodlar
+```Java
+public class Main {
+    public static void main(String[] args) {
+        // İki tam sayı ile çarpma
+        int resultInt = multiply(5, 3);
+        System.out.println("Çarpım (int): " + resultInt);
 
+        // İki double sayı ile çarpma
+        double resultDouble = multiply(2.5, 3.0);
+        System.out.println("Çarpım (double): " + resultDouble);
+
+        // Üç sayı ile çarpma
+        int resultTriple = multiply(2, 3, 4);
+        System.out.println("Çarpım (üç sayı): " + resultTriple);
+    }
+
+    // İki tam sayı ile çarpma
+    static int multiply(int num1, int num2) {
+        return num1 * num2;
+    }
+
+    // İki double sayı ile çarpma
+    static double multiply(double num1, double num2) {
+        return num1 * num2;
+    }
+
+    // Üç sayı ile çarpma (overloading)
+    static int multiply(int num1, int num2, int num3) {
+        return num1 * num2 * num3;
+    }
+}
+```
