@@ -78,3 +78,43 @@ public class Main {
     }
 }
 ```
+## Scope
+```Java
+public class Main {
+    // Global (class) kapsamında bir değişken
+    static int globalVariable = 10;
+
+    public static void main(String[] args) {
+        // Local (metod) kapsamında bir değişken
+        int localVariable = 5;
+        System.out.println("Local Değişken: " + localVariable);
+
+        // Global değişkene erişim
+        System.out.println("Global Değişken: " + globalVariable);
+
+        // Blok kapsamında bir değişken
+        {
+            int blockVariable = 8;
+            System.out.println("Blok Değişken: " + blockVariable);
+
+            // Blok içinde global değişkene erişim
+            System.out.println("Global Değişken (Blok): " + globalVariable);
+        }
+
+        // Blok dışında blok değişkenine erişim yok
+        // System.out.println("Blok Değişken: " + blockVariable); // Hata!
+
+        // Global değişkeni güncelleme
+        globalVariable = 20;
+        System.out.println("Güncellenmiş Global Değişken: " + globalVariable);
+        
+        // Method çağrısı ile global değişkeni kullanma
+        useGlobalVariable();
+    }
+
+    // Başka bir metod içinde global değişken kullanma
+    static void useGlobalVariable() {
+        System.out.println("Global Değişken (Metod): " + globalVariable);
+    }
+}
+```
