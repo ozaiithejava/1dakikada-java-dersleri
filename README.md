@@ -16,5 +16,5 @@
 [![Udemy](https://img.shields.io/badge/Udemy-Course-EC5252?style=for-the-badge&logo=udemy&logoColor=white)](https://udemy.com/your_course)
 
 #### Proje Ortakları :
-
+![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
 
